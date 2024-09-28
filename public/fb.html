@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Downloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <custom-header></custom-header>
+
+  <main>
+    <h1 class="main-header">Facebook Video Downloader</h1>
+    <form id="downloadForm" action="/download" method="get">
+      <div class="fetch">
+        <input type="text" id="url" name="url" required placeholder="Enter YouTube URL">
+        <button type="button" onclick="fetchFormats()">Generate Video</button>
+      </div>
+
+      <div class="loading-bar hidden">
+        <div class="progress"></div>
+      </div>
+
+      <div class="download hidden">
+        <select id="format" name="format" required aria-placeholder="Select Format">
+          <option value="" disabled selected>Select Format:</option>
+        </select>
+        <button type="submit" id="downloadButton">Download Video</button>
+      </div>
+
+      <div class="download-loading-bar hidden">
+        <div class="download-progress"></div>
+      </div>
+    </form>
+  </main>
+
+  <script src="customheader.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

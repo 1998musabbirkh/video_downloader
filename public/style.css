@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-green : #00A12E;
+    --color-white : #ffffff;
+    --color-light-blue : #3A3F85;
+    --color-dark-gray : #333333;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-dark-gray);
+    font-family: "Lato", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: var(--color-green);
+    border-bottom: 1px solid var(--color-green);
+}
+
+.desktop-nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.desktop-nav ul a {
+    color: #008526;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-header {
+    font-size: 2.9rem;
+    font-weight: 900;
+}
+
+main form {
+    width: 600px;
+}
+
+input[type="text"], select {
+    width: 100%; 
+    font-size: 1.2rem; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+input::placeholder, select::placeholder {
+    font-size: 1.2rem; 
+    color: var(--color-dark-gray); 
+}
+
+button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 1.3rem;
+    width: 100%;
+}
+
+/* Add this to your style.css file */
+.hidden {
+    display: none;
+  }
+  .loading-bar {
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 10px;
+    margin-top: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.loading-bar .progress {
+    width: 0;
+    height: 100%;
+    background-color: var(--color-green);
+    transition: width 0.4s ease-in-out;
+}
+
+.download-loading-bar {
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 10px;
+    margin-top: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.download-loading-bar .download-progress {
+    width: 0;
+    height: 100%;
+    background-color: var(--color-light-blue); /* Different color for download progress */
+    transition: width 0.4s ease-in-out;
+}
